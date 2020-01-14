@@ -16,11 +16,30 @@ body {
 }
 
 p {
-    line-height: 1.3em;
+    line-height: 1.5em;
 }
 
 a {
     text-decoration: none;
+}
+
+ul {
+
+    li {
+        position: relative;
+        padding-left: 20px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: $color-charcoal;
+        }
+    }
 }
 
 img {

@@ -142,11 +142,27 @@ body {
 }
 
 p {
-    line-height: 1.3em;
+    line-height: 1.5em;
 }
 
 a {
     text-decoration: none;
+}
+
+ul li {
+    position: relative;
+    padding-left: 20px;
+}
+
+ul li:before {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    content: '';
+    border-radius: 50%;
+    background-color: #414754;
 }
 
 img {
@@ -1249,7 +1265,7 @@ img {
 
 .portfolio-list-item-content-text {
     font-size: 12px;
-    line-height: 1.3em;
+    line-height: 1.5em;
     margin-top: 20px;
 }
 
