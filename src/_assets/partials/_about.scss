@@ -11,6 +11,7 @@
 
         @include viewport-sm {
             display: flex;
+            align-items: flex-start;
         }
     }
 

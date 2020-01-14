@@ -273,6 +273,8 @@ img {
     .about-wrapper {
         display: -webkit-box;
         display: flex;
+        -webkit-box-align: start;
+                align-items: flex-start;
     }
 
     body {
