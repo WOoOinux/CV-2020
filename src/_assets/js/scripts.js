@@ -1,4 +1,6 @@
-const threshold = .1;
+/*jshint esversion: 6 */
+
+const threshold = 0.1;
 const options = {
     root: null,
     rootMargin: '0px',
@@ -12,7 +14,7 @@ const callback = function(entries, observer) {
             observer.unobserve(entry.target);
         }
     });
-}
+};
 
 document.documentElement.classList.add('reveal-loaded');
 
@@ -22,5 +24,5 @@ window.addEventListener('DOMContentLoaded', function () {
 
     targets.forEach(function(target) {
         observer.observe(target);
-    })
-})
+    });
+});
