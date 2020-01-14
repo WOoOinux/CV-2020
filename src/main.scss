@@ -1,0 +1,102 @@
+@import "_assets/vendors/reset-css/**/*";
+
+@import "_assets/manifest";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-family: $default-font-family !important;
+  color: $color-charcoal;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+p {
+    line-height: 1.3em;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.reveal-loaded {
+
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    .reveal-visible {
+        opacity: 1;
+        transform: none;
+        transition: .6s ease-in-out;
+    }
+
+    .reveal-visible-1 {
+        transition-delay: .1s;
+    }
+
+    .reveal-visible-2 {
+        transition-delay: .2s;
+    }
+
+    .reveal-visible-3 {
+        transition-delay: .3s;
+    }
+
+    .reveal-visible-4 {
+        transition-delay: .4s;
+    }
+
+    .reveal-visible-5 {
+        transition-delay: .5s;
+    }
+
+    .reveal-visible-6 {
+        transition-delay: .6s;
+    }
+
+    .reveal-visible-7 {
+        transition-delay: .7s;
+    }
+
+    .reveal-visible-8 {
+        transition-delay: .8s;
+    }
+}
+
+
+.section {
+
+    &-wrapper {
+        padding: 30px 20px;
+
+        @include viewport-sm {
+            padding: 60px;
+        }
+
+        @include viewport-md {
+            padding: 100px 0;
+            margin: 0 auto;
+            max-width: $container-max-md-width;
+        }
+
+        @include viewport-lg {
+            max-width: $container-max-lg-width;
+        }
+    }
+}
+
+@import "_assets/partials/about";
+@import "_assets/partials/skills";
+@import "_assets/partials/portfolio";
+@import "_assets/partials/experience";
+@import "_assets/partials/footer";

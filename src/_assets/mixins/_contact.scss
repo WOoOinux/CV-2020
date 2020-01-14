@@ -1,0 +1,44 @@
+@mixin contact($color: $color-charcoal) {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 30px;
+    height: 20px;
+    font: {
+        family: $title-font-family;
+        size: 16px;
+    }
+    color: $color;
+    background: {
+        repeat: no-repeat;
+        position: center left;
+        size: auto 16px;
+    };
+
+    @include viewport-md {
+        height: 30px;
+        font-size: 18px;
+        background-size: auto 20px;
+    }
+}
+
+@mixin social-link() {
+    display: block;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    background: {
+        repeat: no-repeat;
+        position: 0 0;
+        size: contain;
+    };
+    transition: background-image ease-in-out .3s;
+
+    @include viewport-md {
+        margin-right: 20px;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}

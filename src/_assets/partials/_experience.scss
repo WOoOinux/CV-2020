@@ -1,0 +1,221 @@
+.experience {
+    background-color: $color-mystic;
+
+    &-title {
+        @include main-title;
+    }
+
+    &-list {
+        position: relative;
+        padding: 30px 0;
+        margin-top: 30px;
+
+        @include viewport-sm {
+            padding: 60px 0;
+            margin-top: 60px;
+        }
+
+        @include viewport-md {
+            padding: 100px 0;
+            margin-top: 100px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            bottom: 0;
+            left: 15%;
+            width: 2px;
+            background-color: $color-charcoal;
+
+            @include viewport-sm {
+                left: 50%;
+            }
+        }
+
+        &-item {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+
+            @include viewport-md {
+                margin-top: 40px;
+            }
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:nth-child(even) {
+
+                @include viewport-sm {
+                    justify-content: flex-end;
+                }
+
+                .experience-list-item-content {
+
+                    @include viewport-sm {
+                        order: 2;
+                    }
+
+                    &:before {
+
+                        @include viewport-sm {
+                            right: auto;
+                            left: -20px;
+                            background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiI+DQogICAgPHBhdGggZD0ibSAxMCwzIC01LDUgNSw1IHoiIGZpbGw9IiNGRkZGRkYiLz4NCjwvc3ZnPg0K');
+                        }
+
+                        @include viewport-md {
+                            left: -31px;
+                        }
+                    }
+                }
+
+                .experience-list-item-date {
+
+                    @include viewport-sm {
+                        order: 1;
+                    }
+                }
+            }
+
+            &-content {
+                order: 2;
+                flex: 0 0 70%;
+                position: relative;
+                width: 70%;
+                padding: 20px;
+                background-color: $color-white;
+                border: 1px solid $color-light-gray;
+                border-radius: 6px;
+                box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.1);
+
+                @include viewport-sm {
+                    order: 1;
+                    flex: 0 0 40%;
+                    width: 40%;
+                    padding: 20px 30px;
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 32px;
+                    left: -20px;
+                    width: 32px;
+                    height: 32px;
+                    background: {
+                        image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiI+DQogICAgPHBhdGggZD0ibSAxMCwzIC01LDUgNSw1IHoiIGZpbGw9IiNGRkZGRkYiLz4NCjwvc3ZnPg0K');
+                        repeat: no-repeat;
+                        position: 0 0;
+                        size: contain;
+                    };
+
+                    @include viewport-sm {
+                        top: 50%;
+                        right: -20px;
+                        left: auto;
+                        transform: translateY(-50%);
+                        background: {
+                            image:  url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiI+DQogICAgPHBhdGggZD0ibSA2LDMgNSw1IC01LDUgeiIgZmlsbD0iI0ZGRkZGRiIvPg0KPC9zdmc+DQo=');
+                            repeat: no-repeat;
+                            position: 0 0;
+                            size: contain;
+                        };
+                    }
+
+                    @include viewport-md {
+                        right: -31px;
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
+
+                &-title {
+                    font: {
+                        family: $title-font-family;
+                        size: 18px;
+                    }
+                    line-height: 1.3em;
+
+                    @include viewport-md {
+                        font-size: 22px;
+                    }
+
+                    @include viewport-lg {
+                        font-size: 26px;
+                    }
+                }
+
+                &-society,
+                &-description {
+                    margin-top: 15px;
+                }
+
+                &-society {
+                    font: {
+                        weight: 600;
+                        size: 14px;
+                    }
+
+                    @include viewport-md {
+                        font-size: 16px;
+                    }
+
+                    @include viewport-lg {
+                        font-size: 18px;
+                    }
+                }
+
+                &-description {
+                    font-size: 12px;
+                    line-height: 1.5em;
+
+                    @include viewport-md {
+                        font-size: 14px;
+                    }
+
+                    @include viewport-lg {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            &-date {
+                order: 1;
+                flex: 0 0 30%;
+                width: 30%;
+                padding: 5px 0;
+                margin-top: 20px;
+                background-color: $color-mystic;
+
+                @include viewport-sm {
+                    order: 2;
+                    flex: 0 0 20%;
+                    align-self: center;
+                    margin-top: 0;
+                    width: 20%;
+                }
+
+                span {
+                    display: block;
+                    text-align: center;
+                    font-size: 12px;
+
+                    @include viewport-md {
+                        font-size: 14px;
+                    }
+
+                    @include viewport-lg {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@mixin main-title($color: $color-charcoal) {
+    text-align: center;
+    color: $color;
+    font: {
+        family: $title-font-family;
+        size: 40px;
+    };
+
+    @include viewport-md {
+        font-size: 60px;
+    }
+}
+
+@mixin subtitle($color: $color-charcoal) {
+    text-align: center;
+    color: $color;
+    font: {
+        size: 20px;
+        weight: 600;
+    };
+
+    @include viewport-md {
+        font-size: 30px;
+    }
+}
