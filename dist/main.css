@@ -667,24 +667,48 @@ img {
     }
 }
 
+.skills-list-item.html5 .skills-list-item-level:after {
+    content: '90%';
+}
+
 .skills-list-item.html5 .skills-list-item-level-value {
     width: 90%;
+}
+
+.skills-list-item.css3 .skills-list-item-level:after {
+    content: '80%';
 }
 
 .skills-list-item.css3 .skills-list-item-level-value {
     width: 80%;
 }
 
+.skills-list-item.javascript .skills-list-item-level:after {
+    content: '60%';
+}
+
 .skills-list-item.javascript .skills-list-item-level-value {
     width: 60%;
 }
 
+.skills-list-item.php .skills-list-item-level:after {
+    content: '50%';
+}
+
 .skills-list-item.php .skills-list-item-level-value {
-    width: 60%;
+    width: 50%;
+}
+
+.skills-list-item.wordpress .skills-list-item-level:after {
+    content: '90%';
 }
 
 .skills-list-item.wordpress .skills-list-item-level-value {
     width: 90%;
+}
+
+.skills-list-item.drupal .skills-list-item-level:after {
+    content: '60%';
 }
 
 .skills-list-item.drupal .skills-list-item-level-value {
@@ -825,6 +849,7 @@ img {
 }
 
 .skills-list-item-level {
+    position: relative;
     width: 50%;
     border-radius: 10px;
     background-color: #82807f;
@@ -867,6 +892,24 @@ img {
     body {
         content: 'xl';
     }
+}
+
+.skills-list-item-level:after {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: -webkit-box;
+    display: flex;
+    color: #fff;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
 }
 
 .skills-list-item-level-value {

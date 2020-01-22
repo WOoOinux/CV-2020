@@ -41,11 +41,16 @@
                 height: 60px;
             }
 
-            $skills: ('html5': '90%','css3': '80%','javascript': '60%', 'php': '60%', 'wordpress': '90%', 'drupal': '60%');
+            $skills: ('html5': '90%','css3': '80%','javascript': '60%', 'php': '50%', 'wordpress': '90%', 'drupal': '60%');
 
             @each $label, $level in $skills {
 
                 &.#{$label} {
+
+                    .skills-list-item-level:after {
+                        content: "#{$level}";
+                    }
+
                     .skills-list-item-level-value {
                         width: #{$level};
                     }
@@ -142,6 +147,7 @@
             }
 
             &-level {
+                position: relative;
                 flex: 0 0 50%;
                 width: 50%;
                 border-radius: 10px;
@@ -161,6 +167,23 @@
                 @include viewport-lg {
                     flex: 0 0 60%;
                     width: 60%;
+                }
+
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font: {
+                        weight: 700;
+                        size: 16px;
+                    };
+                    color: $color-white;
+                    line-height: 1em;
                 }
 
                 &-value {
