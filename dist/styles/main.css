@@ -648,11 +648,11 @@ img {
 }
 
 .skills-list-item.javascript .skills-list-item-level:after {
-    content: '60%';
+    content: '80%';
 }
 
 .skills-list-item.javascript .skills-list-item-level-value {
-    width: 60%;
+    width: 80%;
 }
 
 .skills-list-item.php .skills-list-item-level:after {

@@ -41,7 +41,7 @@
                 height: 60px;
             }
 
-            $skills: ('html5': '90%','css3': '80%','javascript': '60%', 'php': '50%', 'wordpress': '90%', 'drupal': '60%');
+            $skills: ('html5': '90%','css3': '80%','javascript': '80%', 'php': '50%', 'wordpress': '90%', 'drupal': '60%');
 
             @each $label, $level in $skills {
 
