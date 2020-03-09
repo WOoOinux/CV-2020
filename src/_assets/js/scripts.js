@@ -7,8 +7,8 @@ const options = {
     threshold
 };
 
-const callback = function(entries, observer) {
-    entries.forEach(function(entry) {
+const callback = (entries, observer) => {
+    entries.forEach(entry => {
         if (entry.intersectionRatio > threshold) {
             entry.target.classList.add('reveal-visible');
             observer.unobserve(entry.target);
@@ -18,11 +18,11 @@ const callback = function(entries, observer) {
 
 document.documentElement.classList.add('reveal-loaded');
 
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver(callback, options);
     const targets = document.querySelectorAll('.reveal');
 
-    targets.forEach(function(target) {
+    targets.forEach(target => {
         observer.observe(target);
     });
 });
