@@ -4,6 +4,23 @@
         @include main-title();
     }
 
+    &-more {
+      margin-top: 30px;
+      text-align: center;
+
+      p {
+        font-style: italic;
+
+        a {
+          transition: color ease-in-out .3s;
+
+          &:hover {
+            color: $color-sand-dollar;
+          }
+        }
+      }
+    }
+
     &-list {
         margin-top: 30px;
 

@@ -1,4 +1,4 @@
-@mixin contact($color: $color-charcoal) {
+@mixin contact($color: $color-charcoal, $color-hover: $color-sand-dollar) {
     display: inline-flex;
     align-items: center;
     padding-left: 30px;
@@ -13,11 +13,16 @@
         position: center left;
         size: auto 16px;
     };
+    transition: color ease-in-out .3s;
 
     @include viewport-md {
         height: 30px;
         font-size: 18px;
         background-size: auto 20px;
+    }
+
+    &:hover {
+      color: $color-hover;
     }
 }
 
