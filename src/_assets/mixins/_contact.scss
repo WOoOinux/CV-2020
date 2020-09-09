@@ -1,5 +1,5 @@
 @mixin contact($color: $color-charcoal, $color-hover: $color-sand-dollar) {
-    display: inline-flex;
+    display: block;
     align-items: center;
     padding-left: 30px;
     height: 20px;
@@ -14,6 +14,10 @@
         size: auto 16px;
     };
     transition: color ease-in-out .3s;
+
+    @include viewport-sm {
+      display: inline-flex;
+    }
 
     @include viewport-md {
         height: 30px;

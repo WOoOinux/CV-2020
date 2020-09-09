@@ -104,6 +104,10 @@
         &-contact {
             margin-top: 20px;
 
+            &:last-child {
+              margin-top: 10px;
+            }
+
             &-link {
                 @include contact;
 
