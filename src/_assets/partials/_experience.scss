@@ -98,7 +98,7 @@
                 @include viewport-sm {
                     order: 1;
                     flex: 0 0 40%;
-                    width: 40%;
+                    max-width: 40%;
                     padding: 20px 30px;
                 }
 
